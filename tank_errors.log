@@ -1,0 +1,184 @@
+2024-04-02 12:44:13,269	Exception occurred:
+<class 'ValueError'>: invalid literal for int() with base 10: '//api.hasbiland.io'
+  File "/usr/local/lib/python3.8/dist-packages/yandextank/core/tankworker.py", line 70, in run
+    self.core.plugins_configure()
+
+  File "/usr/local/lib/python3.8/dist-packages/yandextank/core/tankcore.py", line 262, in plugins_configure
+    plugin.configure()
+
+  File "/usr/local/lib/python3.8/dist-packages/yandextank/plugins/Phantom/plugin.py", line 67, in configure
+    self.phantom_config = self.phantom.config_file
+
+  File "/usr/local/lib/python3.8/dist-packages/yandextank/plugins/Phantom/plugin.py", line 76, in phantom
+    self._phantom.read_config()
+
+  File "/usr/local/lib/python3.8/dist-packages/yandextank/plugins/Phantom/utils.py", line 95, in read_config
+    stream.read_config()
+
+  File "/usr/local/lib/python3.8/dist-packages/yandextank/plugins/Phantom/utils.py", line 274, in read_config
+    self.ipv6, self.resolved_ip, self.port, self.address = self.address_wizard.resolve(
+
+  File "/usr/local/lib/python3.8/dist-packages/yandextank/common/util.py", line 553, in resolve
+    port = int(parts[1])
+
+2024-04-02 12:44:23,138	Exception occurred:
+<class 'IndexError'>: list index out of range
+  File "/usr/local/lib/python3.8/dist-packages/yandextank/core/tankworker.py", line 70, in run
+    self.core.plugins_configure()
+
+  File "/usr/local/lib/python3.8/dist-packages/yandextank/core/tankcore.py", line 262, in plugins_configure
+    plugin.configure()
+
+  File "/usr/local/lib/python3.8/dist-packages/yandextank/plugins/Phantom/plugin.py", line 67, in configure
+    self.phantom_config = self.phantom.config_file
+
+  File "/usr/local/lib/python3.8/dist-packages/yandextank/plugins/Phantom/utils.py", line 106, in config_file
+    self._config_file = self.compose_config()
+
+  File "/usr/local/lib/python3.8/dist-packages/yandextank/plugins/Phantom/utils.py", line 114, in compose_config
+    streams_config += stream.compose_config()
+
+  File "/usr/local/lib/python3.8/dist-packages/yandextank/plugins/Phantom/utils.py", line 288, in compose_config
+    self.stepper_wrapper.prepare_stepper()
+
+  File "/usr/local/lib/python3.8/dist-packages/yandextank/stepper/main.py", line 264, in prepare_stepper
+    self.__make_stpd_file()
+
+  File "/usr/local/lib/python3.8/dist-packages/yandextank/stepper/main.py", line 337, in __make_stpd_file
+    stepper = Stepper(
+
+  File "/usr/local/lib/python3.8/dist-packages/yandextank/stepper/main.py", line 59, in __init__
+    self.af = AmmoFactory(ComponentFactory(**kwargs))
+
+  File "/usr/local/lib/python3.8/dist-packages/yandextank/stepper/main.py", line 32, in __init__
+    self.ammo_generator = factory.get_ammo_generator()
+
+  File "/usr/local/lib/python3.8/dist-packages/yandextank/stepper/config.py", line 125, in get_ammo_generator
+    ammo_gen = self._get_ammo_generator()
+
+  File "/usr/local/lib/python3.8/dist-packages/yandextank/stepper/config.py", line 121, in _get_ammo_generator
+    return missile.FILE_READERS[self.ammo_type](
+
+  File "/usr/local/lib/python3.8/dist-packages/yandextank/stepper/missile.py", line 276, in __init__
+    self.headers = {pair[0].strip(): pair[1].strip() for pair in [h.split(':', 1) for h in headers]} \
+
+  File "/usr/local/lib/python3.8/dist-packages/yandextank/stepper/missile.py", line 276, in <dictcomp>
+    self.headers = {pair[0].strip(): pair[1].strip() for pair in [h.split(':', 1) for h in headers]} \
+
+2024-04-02 13:53:14,281	Exception occurred:
+<class 'socket.gaierror'>: [Errno -2] Name or service not known
+  File "/usr/local/lib/python3.8/dist-packages/yandextank/core/tankworker.py", line 70, in run
+    self.core.plugins_configure()
+
+  File "/usr/local/lib/python3.8/dist-packages/yandextank/core/tankcore.py", line 262, in plugins_configure
+    plugin.configure()
+
+  File "/usr/local/lib/python3.8/dist-packages/yandextank/plugins/Phantom/plugin.py", line 67, in configure
+    self.phantom_config = self.phantom.config_file
+
+  File "/usr/local/lib/python3.8/dist-packages/yandextank/plugins/Phantom/plugin.py", line 76, in phantom
+    self._phantom.read_config()
+
+  File "/usr/local/lib/python3.8/dist-packages/yandextank/plugins/Phantom/utils.py", line 95, in read_config
+    stream.read_config()
+
+  File "/usr/local/lib/python3.8/dist-packages/yandextank/plugins/Phantom/utils.py", line 274, in read_config
+    self.ipv6, self.resolved_ip, self.port, self.address = self.address_wizard.resolve(
+
+  File "/usr/local/lib/python3.8/dist-packages/yandextank/common/util.py", line 558, in resolve
+    resolved = self.lookup_fn(address_str, port)
+
+  File "/usr/lib/python3.8/socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+
+2024-04-02 14:01:01,814	Using phantom.port option is deprecated. Use phantom.address=[address]:port instead
+2024-04-02 14:02:09,387	Using phantom.port option is deprecated. Use phantom.address=[address]:port instead
+2024-04-02 14:21:23,391	Cannot change permissions to pandora
+2024-04-02 14:21:28,338	Filepath=/var/loadtest/logs/2024-04-02_14-21-23.372895/pandora_rfq5mg9u.log, lines_num=20, buf_size=8192, fsize=1171
+2024-04-02 14:22:02,177	Cannot change permissions to pandora
+2024-04-02 14:22:06,923	Filepath=/var/loadtest/logs/2024-04-02_14-22-02.157027/pandora_4vjgan0x.log, lines_num=20, buf_size=8192, fsize=1171
+2024-04-02 14:23:13,978	Cannot change permissions to /home/vac/Desktop/pandora
+2024-04-02 14:23:20,229	Test interrupted:
+<class 'RuntimeError'>: Unable to start Pandora binary and/or file does not exist: ['/home/vac/Desktop/pandora', '/var/loadtest/logs/2024-04-02_14-23-13.958954/pandora_config_6198ry8h.yaml']
+  File "/usr/local/lib/python3.8/dist-packages/yandextank/core/tankworker.py", line 78, in run
+    self.core.plugins_start_test()
+
+  File "/usr/local/lib/python3.8/dist-packages/yandextank/core/tankcore.py", line 284, in plugins_start_test
+    plugin.start_test()
+
+  File "/usr/local/lib/python3.8/dist-packages/yandextank/plugins/Pandora/plugin.py", line 251, in start_test
+    raise RuntimeError(
+
+2024-04-02 14:24:50,863	Cannot change permissions to /home/vac/Desktop/pandora
+2024-04-02 14:24:54,103	Test interrupted:
+<class 'RuntimeError'>: Unable to start Pandora binary and/or file does not exist: ['/home/vac/Desktop/pandora', '/var/loadtest/logs/2024-04-02_14-24-50.844274/pandora_config_63pbyghc.yaml']
+  File "/usr/local/lib/python3.8/dist-packages/yandextank/core/tankworker.py", line 78, in run
+    self.core.plugins_start_test()
+
+  File "/usr/local/lib/python3.8/dist-packages/yandextank/core/tankcore.py", line 284, in plugins_start_test
+    plugin.start_test()
+
+  File "/usr/local/lib/python3.8/dist-packages/yandextank/plugins/Pandora/plugin.py", line 251, in start_test
+    raise RuntimeError(
+
+2024-04-02 14:25:22,510	Using phantom.port option is deprecated. Use phantom.address=[address]:port instead
+2024-04-02 14:25:44,554	Using phantom.port option is deprecated. Use phantom.address=[address]:port instead
+2024-04-02 14:26:41,332	Cannot change permissions to /home/vac/Desktop/pandora
+2024-04-02 14:26:45,564	Test interrupted:
+<class 'RuntimeError'>: Unable to start Pandora binary and/or file does not exist: ['/home/vac/Desktop/pandora', '/var/loadtest/logs/2024-04-02_14-26-41.311846/pandora_config_aw5h6qy1.yaml']
+  File "/usr/local/lib/python3.8/dist-packages/yandextank/core/tankworker.py", line 78, in run
+    self.core.plugins_start_test()
+
+  File "/usr/local/lib/python3.8/dist-packages/yandextank/core/tankcore.py", line 284, in plugins_start_test
+    plugin.start_test()
+
+  File "/usr/local/lib/python3.8/dist-packages/yandextank/plugins/Pandora/plugin.py", line 251, in start_test
+    raise RuntimeError(
+
+2024-04-02 14:31:07,471	Cannot change permissions to /pandora
+2024-04-02 14:31:11,709	Test interrupted:
+<class 'RuntimeError'>: Unable to start Pandora binary and/or file does not exist: ['/pandora', '/var/loadtest/logs/2024-04-02_14-31-07.451101/pandora_config_1ipei8d0.yaml']
+  File "/usr/local/lib/python3.8/dist-packages/yandextank/core/tankworker.py", line 78, in run
+    self.core.plugins_start_test()
+
+  File "/usr/local/lib/python3.8/dist-packages/yandextank/core/tankcore.py", line 284, in plugins_start_test
+    plugin.start_test()
+
+  File "/usr/local/lib/python3.8/dist-packages/yandextank/plugins/Pandora/plugin.py", line 251, in start_test
+    raise RuntimeError(
+
+2024-04-02 14:31:51,729	Test interrupted:
+<class 'RuntimeError'>: Unable to start Pandora binary and/or file does not exist: ['/pandora', '/var/loadtest/logs/2024-04-02_14-31-47.460860/pandora_config_1g6eknqq.yaml']
+  File "/usr/local/lib/python3.8/dist-packages/yandextank/core/tankworker.py", line 78, in run
+    self.core.plugins_start_test()
+
+  File "/usr/local/lib/python3.8/dist-packages/yandextank/core/tankcore.py", line 284, in plugins_start_test
+    plugin.start_test()
+
+  File "/usr/local/lib/python3.8/dist-packages/yandextank/plugins/Pandora/plugin.py", line 251, in start_test
+    raise RuntimeError(
+
+2024-04-02 14:37:22,887	Using phantom.port option is deprecated. Use phantom.address=[address]:port instead
+2024-04-02 14:38:11,143	Using phantom.port option is deprecated. Use phantom.address=[address]:port instead
+2024-04-02 14:39:37,679	Using phantom.port option is deprecated. Use phantom.address=[address]:port instead
+2024-04-02 14:40:13,461	Using phantom.port option is deprecated. Use phantom.address=[address]:port instead
+2024-04-02 14:40:27,188	Using phantom.port option is deprecated. Use phantom.address=[address]:port instead
+2024-04-02 14:41:15,390	Using phantom.port option is deprecated. Use phantom.address=[address]:port instead
+2024-04-02 14:41:40,677	Using phantom.port option is deprecated. Use phantom.address=[address]:port instead
+2024-04-02 14:42:17,194	Using phantom.port option is deprecated. Use phantom.address=[address]:port instead
+2024-04-02 14:42:40,668	Using phantom.port option is deprecated. Use phantom.address=[address]:port instead
+2024-04-02 14:42:52,774	Using phantom.port option is deprecated. Use phantom.address=[address]:port instead
+2024-04-02 14:43:11,021	Using phantom.port option is deprecated. Use phantom.address=[address]:port instead
+2024-04-02 14:44:01,548	Using phantom.port option is deprecated. Use phantom.address=[address]:port instead
+2024-04-02 14:44:30,629	Using phantom.port option is deprecated. Use phantom.address=[address]:port instead
+2024-04-02 14:44:30,652	Using phantom.port option is deprecated. Use phantom.address=[address]:port instead
+2024-04-02 14:44:30,676	Using phantom.port option is deprecated. Use phantom.address=[address]:port instead
+2024-04-02 14:44:30,699	Using phantom.port option is deprecated. Use phantom.address=[address]:port instead
+2024-04-02 14:44:30,723	Using phantom.port option is deprecated. Use phantom.address=[address]:port instead
+2024-04-02 14:46:00,497	Using phantom.port option is deprecated. Use phantom.address=[address]:port instead
+2024-04-02 14:54:02,198	Using phantom.port option is deprecated. Use phantom.address=[address]:port instead
+2024-04-02 14:55:04,869	Using phantom.port option is deprecated. Use phantom.address=[address]:port instead
+2024-04-02 14:56:32,692	Using phantom.port option is deprecated. Use phantom.address=[address]:port instead
+2024-04-02 14:57:23,943	Using phantom.port option is deprecated. Use phantom.address=[address]:port instead
+2024-04-02 16:09:32,543	Using phantom.port option is deprecated. Use phantom.address=[address]:port instead
+2024-04-02 16:09:50,524	Using phantom.port option is deprecated. Use phantom.address=[address]:port instead

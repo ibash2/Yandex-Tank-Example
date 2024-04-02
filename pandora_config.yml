@@ -1,0 +1,22 @@
+pools:
+  - id: HTTP pool                    # pool name (for your choice)
+    gun:
+      type: http              # gun type
+      target: api.hasbiland.io:443   # gun target
+
+    ammo:
+      type: uri                      # ammo format
+      file: ./ammo.uri               # ammo file path
+    result:
+      type: phout                    # report format (phout is compatible for Yandex.Tank)
+      destination: ./phout.log       # report file name
+
+    rps:                             # RPS scheduler - controls throughput over test
+      type: line                     # linear growth load
+      from: 1                        # from 1 responses per second
+      to: 5                          # to 5 responses per second
+      duration: 2s                   # for 2 seconds
+
+    startup:                         # startup scheduler - control the level of parallelism
+      type: once                     # start 5 instances
+      times: 5  

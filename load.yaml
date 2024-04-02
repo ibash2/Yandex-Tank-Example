@@ -1,21 +1,40 @@
 phantom:
-  address: 127.0.0.1:7777 # [Адрес цели]:[порт цели]
+  address: therpk.ru:443 # [Адрес цели]:[порт цели]
+  ssl: true 
+
+  # header_http: "1.1"
+  uris:
+    - /
 
   # GET
-  ammofile: ./get_ammo.txt
-  ammo_type: uri
+  # ammofile: ./get_ammo.txt
+  # ammo_type: uri
 
   # POST
   # ammofile: ./post_ammo.txt
   # ammo_type: uripost
-
+  
   headers:
-    - "[Host: www.target.example.com]"
-    - "[Connection: close]"
+    - "[Host: therpk.ru]"
+    # - "[Connection: close]"
+    # - "[HEADER Origin: hasbiland.io]"
+    # - "[Accept: */*]"
+    # - "[Accept-Language: en-US,en;q=0.5]"
+    # - "[Accept-Encoding: gzip, deflate, br]"
+    # - "[Access-Control-Request-Method: GET]"
+    # - "[Access-Control-Request-Headers: authorization]"
+    # - "[Referer: https://hasbiland.io/]"
+    # - "[Origin: https://hasbiland.io]"
+    # - "[Connection: keep-alive]"
+    # - "[Sec-Fetch-Dest: empty]"
+    # - "[Sec-Fetch-Mode: cors]"
+    # - "[Sec-Fetch-Site: same-site]"
   load_profile:
     load_type: rps # планируем загрузку, определяя количество запросов в секунду
-    schedule: line(1000, 10000, 10m) # начиная с 1rps , линейно увеличиваясь до 10 rps в течение 10 минут
+    schedule: line(10000, 100000, 1m) # начиная с 1rps , линейно увеличиваясь до 10 rps в течение 10 минут
 console:
   enabled: true # включить вывод консоли
 telegraf:
   enabled: false # давайте в первый раз отключим мониторинг телеграфа
+
+

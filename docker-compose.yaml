@@ -3,6 +3,7 @@ services:
     container_name: Tank
     image: yandex/yandex-tank
     volumes:
+      - /home/vac/Desktop/pandora:/pandora
       - ./:/var/loadtest
       - /ssh-agent:/ssh-agent
     environment:
