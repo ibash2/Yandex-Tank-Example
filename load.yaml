@@ -1,0 +1,21 @@
+phantom:
+  address: 127.0.0.1:7777 # [Адрес цели]:[порт цели]
+
+  # GET
+  ammofile: ./get_ammo.txt
+  ammo_type: uri
+
+  # POST
+  # ammofile: ./post_ammo.txt
+  # ammo_type: uripost
+
+  headers:
+    - "[Host: www.target.example.com]"
+    - "[Connection: close]"
+  load_profile:
+    load_type: rps # планируем загрузку, определяя количество запросов в секунду
+    schedule: line(1000, 10000, 10m) # начиная с 1rps , линейно увеличиваясь до 10 rps в течение 10 минут
+console:
+  enabled: true # включить вывод консоли
+telegraf:
+  enabled: false # давайте в первый раз отключим мониторинг телеграфа

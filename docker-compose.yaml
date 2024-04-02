@@ -1,0 +1,10 @@
+services:
+  loadtest:
+    container_name: Tank
+    image: yandex/yandex-tank
+    volumes:
+      - ./:/var/loadtest
+      - /ssh-agent:/ssh-agent
+    environment:
+      - SSH_AUTH_SOCK=/ssh-agent
+    network_mode: host
